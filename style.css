@@ -2,27 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma,  Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   body {
-    background-color: rgb(232, 208, 169 );
+    background-color: rgb(164, 226, 230);
   }
   .head {
-    margin: top 1px;;
+    margin-top: 1rem;
   }
   .box {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
-    margin-right: auto;
-    text-align: center;
   }
   .form {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(214, 221, 120);
+    background-color: white;
     width: 600px;
     height: 500px;
     box-shadow: 2px 4px 10px gray;
@@ -44,11 +42,10 @@
   }
   .tableForm {
     margin-top: 10px;
-    margin-left: 10px;
   }
   .btn {
-    background-color: rgb(93, 179, 219);
-    color: rgba(235, 235, 235, 0.623);
+    background-color: rgb(185, 55, 146);
+    color: white;
     padding: 10px 20px;
     font-size: large;
     font-weight: 600;
@@ -56,19 +53,17 @@
   }
   
   input:invalid:focus {
-    border: 2px solid rgb(112, 84, 84);
+    border: 2px solid red;
   }
   
   .table {
     border: 2px solid black;
-    margin: 20px auto;
+    margin: 40px auto;
   }
-  
-  .td,d
+  .td,
   .th {
-    padding: 15px;
-    margin-left: absolute;
-
+    padding: 10px;
+    text-align: center;
   }
   
   .subHead {
