@@ -1,5 +1,7 @@
 let form = document.getElementById("form");
 
+// localStorage.clear();
+// let Entries = [];
 
 const retriveEntries = () => {
   let entries = localStorage.getItem("userEntry");
@@ -32,7 +34,7 @@ const displayEntries = () => {
 
   let tableDiv = document.getElementById("tableDiv");
 
-  
+  // <th class="th">Name</th> inside oneMore head for name
   tableDiv.innerHTML = `<table class="table" border="2">
   <tr>
     <th class="th">Name</th>
@@ -45,6 +47,7 @@ const displayEntries = () => {
   </table>`;
 };
 
+// const saveUserFrom = () => {
 const saveUserFrom = (event) => {
   event.preventDefault();
 
@@ -73,8 +76,11 @@ form.addEventListener("submit", saveUserFrom);
 
 displayEntries();
 
+// Add additional validations to the date input field so that it accepts date of birth for people between ages 18 and 55 only. You'll need to figure out how to do this.
 
 function getAge(today, birthDate) {
+  // var today = new Date();
+  // var birthDate = new Date(DOB);
 
   var age = today.getFullYear() - birthDate.getFullYear();
   var m = today.getMonth() - birthDate.getMonth();
@@ -96,7 +102,7 @@ dateELE.addEventListener("change", () => {
 
   dateELE.style.border = "2px solid rgba(0, 0, 0, 0.4)";
   if (age < 18 || age > 55) {
-    dateELE.setCustomValidity("Your age is not lies in between 18 and 55");
+    dateELE.setCustomValidity("Your age does not lie between 18 and 55");
     dateELE.style.border = "2px solid red";
     return;
   } else {
@@ -115,4 +121,4 @@ function validate(ele) {
   } else {
     ele.setCustomValidity("");
   }
-}s
+}
